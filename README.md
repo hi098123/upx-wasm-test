@@ -1,8 +1,14 @@
 # upx-wasm-test
 
-## Update & Support
+## 업데이트 및 지원
 - No Update
 - No Support
+- 필요한 기능이 있다면 알아서 코드수정하세요.
+
+## 빌드 결과물
+`upx.wasm`, `upx.js`
+GPLv2를 지키기 위해서 빌드 결과와 소스 수정부분 공개
+소스수정: upx/src/main.cpp 에서 upx_main 함수(하단 빌드 방법에 소개)
 
 ## 빌드 방법 (Linux)
 1. ./gitclone.sh
@@ -36,6 +42,3 @@ target_compile_options(${t} PRIVATE $<$<CONFIG:Release>:-fstack-protector>)
 `-O2 -sWASM=1 -sEXPORTED_RUNTIME_METHODS='[\"callMain\", \"FS\"]' -sALLOW_MEMORY_GROWTH=1 -sNO_DISABLE_EXCEPTION_CATCHING`
 5. 빌드(SKIP emcmake cmake . : emcmake는 건너뜀)
 `emmake make`
-
-## 빌드 결과물
-`upx.wasm`, `upx.js`
