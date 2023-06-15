@@ -3,7 +3,6 @@
 ## 업데이트 및 지원
 - No Update
 - No Support
-- 필요한 기능이 있다면 알아서 코드수정하세요.
 
 ## 빌드 결과물
 `upx.wasm`, `upx.js`
