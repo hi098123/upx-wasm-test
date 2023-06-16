@@ -9,9 +9,9 @@
 GPLv2를 지키기 위해서 빌드 결과와 소스 수정부분`upx/src/main.cpp 에서 upx_main 함수(하단 빌드 방법에 소개)` 공개
 
 ## 빌드 방법 (Linux)
-1. ./gitclone.sh
-2. ./upx/src/main.cpp 파일에서 upx_main 함수 수정 (오버플로 체크등 UPX에 있는 검증기능 사용불가)
-```c
+1. `./gitclone.sh`
+2. `./upx/src/main.cpp` 파일에서 `upx_main` 함수 수정 (오버플로 체크등 UPX에 있는 검증기능 사용불가)
+```c++
 int upx_main(int argc, char *argv[]) {
     int i;
     static char default_argv0[] = "upx";
