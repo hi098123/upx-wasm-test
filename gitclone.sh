@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
+REPO="https://github.com/upx/upx"
 UPX_DIR="upx"
-UPX_VERSION="v4.0.2"
+UPX_VERSION=$(git ls-remote --tags --refs $REPO | tail -n1 | cut -d/ -f3)
 
-git clone -b $UPX_VERSION https://github.com/upx/upx $UPX_DIR
-git --git-dir=$UPX_DIR/.git --work-tree=$UPX_DIR checkout $UPX_VERSION
-cd $UPX_DIR
-git submodule update --init
+git clone --recursive -b $UPX_VERSION $REPO $UPX_DIR
