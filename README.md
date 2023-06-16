@@ -38,5 +38,5 @@ target_compile_options(${t} PRIVATE $<$<CONFIG:Release>:-fstack-protector>)
 ```
 4. em++ 매개변수 수정
 `-O2 -sWASM=1 -sEXPORTED_RUNTIME_METHODS='["callMain", "FS"]' -sALLOW_MEMORY_GROWTH=1 -sNO_DISABLE_EXCEPTION_CATCHING`
-5. 빌드(SKIP emcmake cmake . : emcmake는 건너뜀)
+5. 빌드(SKIP `emcmake cmake .` : emcmake는 건너뜀)
 `emmake make`
